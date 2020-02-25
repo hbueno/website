@@ -1,0 +1,23 @@
+# Configuration file for TravisCI
+os: linux
+dist: xenial
+language: python
+python: "3.6"
+notifications:
+  email: false
+
+# Only build pushes from the master branch. PRs are always built.
+branches:
+  only:
+    - master
+
+env:
+  global:
+    # Doctr deploy key for hbueno/hbueno.github.io
+    - secure: "laBz7UbFXa7cGmGn9TuzJGE0GKl/R16tHN7BuPrEF2EiBh+ztq9eeFi1BsfhtBF7vbHcGLPiNDWRA7XT8CiluXP9gNr/KZk8H7HEwh/cC1LAATstQrF/dW2LAIhGFJDew6z+z1/DcK3XYuOPSAa1pQRmIa69NcIGYEqBaEItme4M1TK084RroXLPfgl96Bwvk3xoFeETHKYjLs2Dg0TOJXwzBHSIpCEqKB8TPSEFe/VzdShJwGa1CS+6tvHCas7PQwGgBGPidooD5t2RgKYfib8xDBFjwdV8JL2pNEWRGmxuog4lIbvsvFRCXXOyglr+3MFttfMF89qn5wGeYToUlTFjhQ67W0yXcf7f3GU3KSh+PaN2Iuo5pXBP+deLNPnpWhgSqyD9BJpExuagYdk3Aq6jJluugsYAOUtwqy6vqFUaVkxhFJCl0oyto4w3IYd4z4eA/g71Nrt20Rp1kXvmT/gBIM556DgXmO7hwVVq+Ck+NrTVzk1T1MPc5dAU/tYSct1ADLIJNgWxaERYUF5jcM4dl00jKlJkp6eQM7BhgaVglK2iU9kYqyx/4v5ByoKSa5wAnJjwPpY9aCiJ7FT2z5dlACptlCwMSn2ClWHW9fiZvvzLAFGrAsfMt3c7Wc6PZpf07QCqkp6A6rMLoqTEgiPC1QW+9KjRweMzK3SzqZs="
+
+    script:
+      - set -e
+      - make
+      - pip install doctr
+      - doctr deploy --built-docs _build --deploy-repo hbueno/hbueno.github.io

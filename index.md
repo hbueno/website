@@ -1,12 +1,13 @@
 ---
-title: Urubu Quickstart
-layout: home 
+title: Henrique B. Santos
+description: Geophysics
+layout: home
 content:
     - start
     - content
     - customize
     - deploy
-    - more 
+    - more
 tagline:
-    Set up your new Urubu project quickly
+    Meu site...
 ---

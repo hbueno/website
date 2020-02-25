@@ -1,6 +1,6 @@
 ---
 title: Add content
-layout: page 
+layout: page
 pager: true
 ---
 
@@ -24,7 +24,7 @@ Content files
 =============
 
 A content file starts with a section between triple dashes `---`.  This is the
-YAML frontmatter with page variables such as `title` and `layout`.  
+YAML frontmatter with page variables such as `title` and `layout`.
 
 After the frontmatter follows the actual content. The format is [Markdown with
 extensions][markdown_ext].
@@ -34,23 +34,23 @@ extensions][markdown_ext].
 Layouts
 =======
 
-Each content file uses the `layout` variable to specify the look of the 
-page. 
+Each content file uses the `layout` variable to specify the look of the
+page.
 
 Urubu Quickstart defines a number of layouts. The `page` layout yields a page
 with a sidebar for the table of contents. If you don't need a sidebar, use the
-`simple_page` layout.  
+`simple_page` layout.
 
 Reference ids
 =============
 
 Urubu resolves *reference ids* in Markdown content, specified by
-the syntax `[<reference-id>]`. 
+the syntax `[<reference-id>]`.
 
 Reference ids are names that refer to links. In Urubu, the pathname of a page
 or folder (without extension) can be used as its reference id. In addition, the
 `reflinks` variable in file `_site.yml` defines reference ids for external
-urls. 
+urls.
 
 Folders
 =======
@@ -69,4 +69,4 @@ Navbar
 ======
 
 The navbar at the top is defined by the `content` variable of the top-level
-`index.md` file. 
+`index.md` file.

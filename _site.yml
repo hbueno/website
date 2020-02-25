@@ -1,6 +1,6 @@
 brand: "Henrique <strong>SANTOS</strong>"
 
-bootswatch: flatly #null # flatly, yeti, lumen,...
+bootswatch: lumen #null # flatly, yeti, lumen,...
 navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 1
